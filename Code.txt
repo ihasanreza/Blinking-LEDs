@@ -1,0 +1,58 @@
+#ifndef F_CPU
+#define F_CPU 16000000UL // 16 MHz clock speed
+#endif
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main(void)
+{
+	DDRA = 0xFF; //Makes PORTC as Output
+	while(1) //infinite loop
+	{
+		PORTA = 0xFF; //Turns ON All LEDs
+		_delay_ms(200); //1 second delay
+		PORTA= 0x00; //Turns OFF All LEDs
+		_delay_ms(200); //1 second delay
+		PORTA = 0xAA; //Turns ON All Alternative LED'S
+		_delay_ms(200); //1 second delay
+		PORTA= 0x55; //Turns ON All Alternative LED'S
+		_delay_ms(200); //1 second delay
+		PORTA = 0x80; //Turns ON 1st LED
+		_delay_ms(200); //1 second delay
+		PORTA= 0x40; //Turns ON 2nd LED
+		_delay_ms(200); //1 second delay
+		PORTA = 0x20; //Turns ON 3rd LED
+		_delay_ms(200); //1 second delay
+		PORTA= 0x10; //Turns ON 4th LED
+		_delay_ms(200); //1 second delay
+		PORTA = 0x08; //Turns ON 5th LED
+		_delay_ms(200); //1 second delay
+		PORTA= 0x04; //Turns ON 6th LED
+		_delay_ms(200); //1 second delay
+		PORTA = 0x02; //Turns ON 7th LED
+		_delay_ms(200); //1 second delay
+		PORTA= 0x01; //Turns ON 8th LED
+		_delay_ms(200); //1 second delay
+		PORTA = 0x02; //Turns ON 2nd LEDs
+		_delay_ms(200); //1 second delay
+		PORTA= 0x04; //Turns ON 3rd LEDs
+		_delay_ms(200); //1 second delay
+		PORTA = 0x08; //Turns ON 4th LEDs
+		_delay_ms(200); //1 second delay
+		PORTA= 0x10; //Turns ON 5th LEDs
+		_delay_ms(200); //1 second delay
+		PORTA = 0x20; //Turns ON 6th LEDs
+		_delay_ms(200); //1 second delay
+		PORTA= 0x40; //Turns ON 7th LEDs
+		_delay_ms(200); //1 second delay
+		PORTA = 0x80; //Turns ON 8th LEDs
+		_delay_ms(200); //1 second delay
+		PORTA= 0x00; //Turns OFF All LEDs
+		_delay_ms(200); //1 second delay
+		PORTA = 0xFF; //Turns ON All LEDs
+		_delay_ms(200); //1 second delay
+		
+	}
+	
+}
